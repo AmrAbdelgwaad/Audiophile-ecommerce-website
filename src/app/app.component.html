@@ -1,0 +1,169 @@
+@if(menuOpened){
+<div class="overlay"></div>
+}
+
+<header [class.black]="home.isActive">
+  <div class="flex-group">
+    <button
+      class="menu-btn"
+      aria-controls="menu"
+      aria-label="menu"
+      [attr.aria-expanded]="menuOpened"
+      (click)="toggleMenu()"
+    >
+      <img
+        [ngSrc]="
+          menuOpened
+            ? 'assets/images/shared/mobile/icon-close.svg'
+            : 'assets/images/shared/mobile/icon-hamburger.svg'
+        "
+        width="20"
+        height="20"
+        alt=""
+        priority
+      />
+    </button>
+    <a
+      routerLink="home"
+      routerLinkActive=""
+      #home="routerLinkActive"
+      ariaCurrentWhenActive="page"
+      class="logo"
+    >
+      <img
+        ngSrc="assets/images/shared/desktop/logo.svg"
+        width="143"
+        height="25"
+        alt="Home - Audiophile"
+        priority
+      />
+    </a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li>
+          <a routerLink="home" routerLinkActive="" ariaCurrentWhenActive="page"
+          >home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="headphones"
+            routerLinkActive=""
+            ariaCurrentWhenActive="page"
+          >headphones</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="speakers"
+            routerLinkActive=""
+            ariaCurrentWhenActive="page"
+          >speakers</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="earphones"
+            routerLinkActive=""
+            ariaCurrentWhenActive="page"
+          >earphones</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button aria-label="cart" class="cart">
+      <img
+        ngSrc="assets/images/shared/desktop/icon-cart.svg"
+        width="23"
+        height="20"
+        alt=""
+      />
+    </button>
+  </div>
+  <div class="menu" id="menu" [attr.data-visible]="menuOpened">
+
+      <div>
+        <a
+          routerLink="headphones"
+          routerLinkActive=""
+          ariaCurrentWhenActive="page"
+          (click)="menuOpened = false"
+          class="menu__link"
+        >
+          <img
+            ngSrc="assets/images/shared/desktop/image-category-thumbnail-headphones.png"
+            width="438"
+            height="422"
+            class="menu__img"
+            alt=""
+          />
+          headphones
+          <span
+            >shop
+            <img
+              ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
+              width="8"
+              height="12"
+              class="arrow"
+              alt=""
+          /></span>
+        </a>
+      </div>
+    <div>
+      <a
+        routerLink="speakers"
+        routerLinkActive=""
+        ariaCurrentWhenActive="page"
+        (click)="menuOpened = false"
+        class="menu__link"
+      >
+        <img
+          ngSrc="assets/images/shared/desktop/image-category-thumbnail-speakers.png"
+          width="438"
+          height="408"
+          class="menu__img"
+          alt=""
+        />
+        speakers
+        <span
+          >shop
+          <img
+            ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
+            width="8"
+            height="12"
+            class="arrow"
+            alt=""
+        /></span>
+      </a>
+    </div>
+    <div>
+      <a
+        routerLink="earphones"
+        routerLinkActive=""
+        ariaCurrentWhenActive="page"
+        (click)="menuOpened = false"
+        class="menu__link"
+      >
+        <img
+          ngSrc="assets/images/shared/desktop/image-category-thumbnail-earphones.png"
+          width="438"
+          height="380"
+          class="menu__img"
+          alt=""
+        />
+        earphones
+        <span
+          >shop
+          <img
+            ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
+            width="8"
+            height="12"
+            class="arrow"
+            alt=""
+        /></span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

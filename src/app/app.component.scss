@@ -1,0 +1,155 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  background-color: var(--clr-black-900);
+}
+
+.black {
+  background-color: var(--clr-black-700);
+}
+
+.nav {
+  display: none;
+}
+
+.flex-group {
+  display: flex;
+}
+
+.menu-btn {
+  width: 1rem;
+  margin: 2.38rem 4.75rem 2.31rem 1.5rem;
+}
+
+.logo {
+  margin-top: 2.06rem;
+}
+
+.cart {
+  margin: 0 2.13rem 0 auto;
+}
+
+.menu[data-visible="false"] {
+  display: none;
+}
+
+.menu[data-visible="true"] {
+  background-color: var(--clr-white-900);
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem 0 2.19rem;
+  animation: intro 700ms ease 0s 1 normal forwards;
+}
+@keyframes intro {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu__link {
+  display: block;
+  color: var(--clr-black-900);
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.06694rem;
+  text-transform: uppercase;
+  background-color: var(--clr-white-700);
+  width: min(20.4375rem, 90vw);
+  border-radius: 0.5rem;
+  margin: 4.25rem auto 0;
+  padding-top: 3.44rem;
+  span {
+    font-size: 0.8125rem;
+    color: hsla(0, 0%, 0%, 0.5);
+    display: block;
+    margin-top: 1.06rem;
+    padding-bottom: 1.38rem;
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+  .arrow {
+    display: inline;
+    margin-left: 0.6rem;
+    width: 0.5125rem;
+    height: 0.625rem;
+  }
+}
+
+.menu__img {
+  max-width: 9.5rem;
+  margin: -7rem auto 0;
+}
+
+@media (min-width: 43em) {
+  .menu-btn {
+    margin: 2.31rem 2.62rem 2.38rem 2.44rem;
+  }
+
+  .logo {
+    margin-top: 2rem;
+  }
+
+  .menu[data-visible="true"] {
+    padding: 2.5rem 0 4.19rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 0.62rem;
+  }
+
+  .menu__link {
+    width: 13.9375rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .flex-group {
+    width: 69.36456rem;
+    margin: 0 auto;
+    border-bottom: var(--border);
+  }
+  .logo {
+    margin-top: 2.17rem;
+    padding-bottom: 2.25rem;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+  .nav__list {
+    display: flex;
+    gap: 2.12rem;
+    margin: 2.19rem 0 0 12.31rem;
+  }
+  .nav__list a {
+    color: var(--clr-white-900);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+}
