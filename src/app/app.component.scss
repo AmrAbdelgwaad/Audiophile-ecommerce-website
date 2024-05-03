@@ -27,6 +27,7 @@ header {
 
 .flex-group {
   display: flex;
+  border-bottom: var(--border);
 }
 
 .menu-btn {
@@ -125,7 +126,6 @@ header {
   .flex-group {
     width: 69.36456rem;
     margin: 0 auto;
-    border-bottom: var(--border);
   }
   .logo {
     margin-top: 2.17rem;
