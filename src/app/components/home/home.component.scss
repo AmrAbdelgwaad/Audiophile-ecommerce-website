@@ -1,5 +1,5 @@
 .banner {
-  background:  url("../../../assets/images/home/mobile/image-header.jpg")
+  background: url("../../../assets/images/home/mobile/image-header.jpg")
     no-repeat;
   background-size: cover;
   background-position-y: -6rem;
@@ -42,7 +42,7 @@
   display: block;
   text-align: center;
   margin: 0 auto;
-  width: 10.1rem;
+  width: 10.2rem;
   padding: 0.94rem 1.84rem 0.94rem 1.97rem;
   color: var(--clr-white-900);
   background-color: var(--clr-primary);
@@ -50,19 +50,19 @@
   font-weight: 700;
   letter-spacing: 0.0625rem;
   text-transform: uppercase;
-  &:hover{
+  &:hover {
     background-color: var(--crl-primary-hover);
   }
 }
 
-.banner__image{
+.banner__image {
   display: none;
 }
 
 @media (min-width: 43em) {
   .banner {
     background: url("../../../assets/images/home/tablet/image-header-t.jpg")
-    no-repeat;
+      no-repeat;
     background-size: cover;
     background-position-y: -6rem;
   }
@@ -82,12 +82,13 @@
 }
 
 @media (min-width: 75em) {
-  .banner__container{
+  .banner__container {
     background: var(--clr-black-700);
   }
   .banner {
-    background: var(--clr-black-700) url("../../../assets/images/home/desktop/image-hero.jpg") no-repeat;
-    background-position: -9rem -5rem;
+    background: var(--clr-black-700)
+      url("../../../assets/images/home/desktop/image-hero.jpg") no-repeat;
+    background-position: -10rem -6rem;
     background-size: 90rem;
     width: 69.36456rem;
     margin: 0 auto;
@@ -106,5 +107,4 @@
   .banner__anchor {
     margin: 0;
   }
-
 }
