@@ -11,7 +11,7 @@
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Me](#me)
+- [Author](#auther)
 
 
 
@@ -94,7 +94,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [google-webfonts-helper](https://gwfh.mranftl.com/fonts) - I used this to import the fonts locally
 - [webcode.tools](https://webcode.tools/css-generator/keyframe-animation) - To generate css animations
-## Me:
+## Author:
 
 - [LinkedIn](https://www.linkedin.com/in/amrabelgawad/)
 - [Frontend Mentor](https://www.frontendmentor.io/profile/AmrAbdelgwaad)
