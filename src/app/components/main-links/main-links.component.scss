@@ -13,8 +13,8 @@
   background-color: var(--clr-white-700);
   width: min(20.4375rem, 90vw);
   border-radius: 0.5rem;
-  margin: 4.25rem auto 0; // height
-  padding-top: 3.44rem; // height
+  margin: 4.25rem auto 0;
+  padding-top: 2.5rem;
   span {
     font-size: 0.8125rem;
     color: hsla(0, 0%, 0%, 0.5);
@@ -35,18 +35,20 @@
 
 .container__img {
   max-width: 9.5rem;
-  margin: -7rem auto 0; // height
+  margin: -7rem auto 0;
 }
 
 @media (min-width: 43em) {
   .container {
-    padding: 5rem 0 6rem; // height
+    padding: 5rem 0 6rem;
     display: flex;
     justify-content: center;
     column-gap: 0.62rem;
   }
 
   .container__link {
+    font-size: 1.125rem;
+    letter-spacing: 0.08038rem;
     width: 13.9375rem;
   }
 }
