@@ -1,5 +1,6 @@
 .container {
   padding: 1rem 0 7.5rem;
+  background-color: var(--clr-white-800);
 }
 
 .container__link {
@@ -14,7 +15,7 @@
   width: min(20.4375rem, 90vw);
   border-radius: 0.5rem;
   margin: 4.25rem auto 0;
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
   span {
     font-size: 0.8125rem;
     color: hsla(0, 0%, 0%, 0.5);
