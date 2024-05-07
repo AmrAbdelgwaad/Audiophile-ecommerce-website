@@ -15,7 +15,7 @@
   width: min(20.4375rem, 90vw);
   border-radius: 0.5rem;
   margin: 4.25rem auto 0;
-  padding-top: .5rem;
+  padding-top: .1rem;
   span {
     font-size: 0.8125rem;
     color: hsla(0, 0%, 0%, 0.5);
@@ -36,11 +36,11 @@
 
 .container__img {
   max-width: 9.5rem;
-  margin: -6rem auto 0;
+  margin: -3rem auto 0;
 }
 
 .container__img-earphone {
-  margin: -4.9rem auto 0;
+  margin-top:  -2.5rem;
 }
 
 
@@ -70,5 +70,9 @@
   }
   .container__img {
     max-width: 14rem;
+    margin-top: -5rem;
+  }
+  .container__img-earphone {
+    margin-top: -3.9rem;
   }
 }
