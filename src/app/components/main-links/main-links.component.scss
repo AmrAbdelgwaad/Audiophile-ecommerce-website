@@ -15,16 +15,20 @@
   width: min(20.4375rem, 90vw);
   border-radius: 0.5rem;
   margin: 4.25rem auto 0;
-  padding-top: .1rem;
+  padding-top: 0.1rem;
   span {
     font-size: 0.8125rem;
     color: hsla(0, 0%, 0%, 0.5);
     display: block;
     margin-top: 1.06rem;
     padding-bottom: 1.38rem;
-    &:hover {
-      color: var(--clr-primary);
-    }
+  }
+  &:hover span {
+    color: var(--clr-primary);
+  }
+  &:hover .container__img{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.06);
   }
   .arrow {
     display: inline;
@@ -40,9 +44,8 @@
 }
 
 .container__img-earphone {
-  margin-top:  -2.5rem;
+  margin-top: -2.5rem;
 }
-
 
 @media (min-width: 43em) {
   .container {
