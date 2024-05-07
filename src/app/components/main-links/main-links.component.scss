@@ -35,8 +35,13 @@
 
 .container__img {
   max-width: 9.5rem;
-  margin: -7rem auto 0;
+  margin: -6rem auto 0;
 }
+
+.container__img-earphone {
+  margin: -4.9rem auto 0;
+}
+
 
 @media (min-width: 43em) {
   .container {
