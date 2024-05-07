@@ -83,15 +83,15 @@
 
 @media (min-width: 75em) {
   .banner__container {
-    background: var(--clr-black-700);
-  }
-  .banner {
     background: var(--clr-black-700)
       url("../../../assets/images/home/desktop/image-hero.jpg") no-repeat;
-    background-position: -10rem -6rem;
+    background-position: center -6rem;
     background-size: 90rem;
+  }
+  .banner {
     width: 69.36456rem;
     margin: 0 auto;
+    background: none;
   }
   .banner__content {
     padding: 8rem 0 9.88rem;
