@@ -5,16 +5,32 @@
         <span> New product </span> XX99 Mark II&NewLine;Headphones
       </h1>
       <p class="banner__description">
-        Experience natural, lifelike audio and exceptional build quality made for
-        the passionate music enthusiast.
+        Experience natural, lifelike audio and exceptional build quality made
+        for the passionate music enthusiast.
       </p>
 
       <a routerLink="../xx99ii" class="banner__anchor"> See product </a>
     </div>
-
-    <img ngSrc="assets/images/home/desktop/image-hero.jpg" height="1458" width="2880" alt="" class="banner__image">
-
   </div>
 </div>
 
-<app-main-links></app-main-links>
+<div class="bg-white">
+  <app-main-links></app-main-links>
+  <picture>
+    <source
+      srcset="assets/images/home/desktop/image-speaker-zx9-d.png"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/home/tablet/image-speaker-zx9-t.png"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/home/mobile/image-speaker-zx9.png"
+      width="320"
+      height="388"
+      alt="A black Zx9 speaker with a modern look, featuring a flat top and a textured band encircling the base."
+      priority
+    />
+  </picture>
+</div>

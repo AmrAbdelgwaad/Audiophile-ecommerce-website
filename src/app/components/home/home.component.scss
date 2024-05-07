@@ -55,8 +55,8 @@
   }
 }
 
-.banner__image {
-  display: none;
+.bg-white {
+  background-color: var(--clr-white-800);
 }
 
 @media (min-width: 43em) {
