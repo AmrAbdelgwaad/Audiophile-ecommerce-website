@@ -16,21 +16,32 @@
 
 <div class="bg-white">
   <app-main-links></app-main-links>
-  <picture>
-    <source
-      srcset="assets/images/home/desktop/image-speaker-zx9-d.png"
-      media="(min-width: 75em)"
-    />
-    <source
-      srcset="assets/images/home/tablet/image-speaker-zx9-t.png"
-      media="(min-width: 43em)"
-    />
-    <img
-      ngSrc="assets/images/home/mobile/image-speaker-zx9.png"
-      width="320"
-      height="388"
-      alt="A black Zx9 speaker with a modern look, featuring a flat top and a textured band encircling the base."
-      priority
-    />
-  </picture>
+  <div class="zx9">
+    <picture>
+      <source
+        srcset="assets/images/home/desktop/image-speaker-zx9-d.png"
+        media="(min-width: 75em)"
+      />
+      <source
+        srcset="assets/images/home/tablet/image-speaker-zx9-t.png"
+        media="(min-width: 43em)"
+      />
+      <img
+        ngSrc="assets/images/home/mobile/image-speaker-zx9.png"
+        width="320"
+        height="388"
+        alt="A black Zx9 speaker with a modern look, featuring a flat top and a textured band encircling the base."
+        class="zx9__image"
+        priority
+      />
+    </picture>
+    <div class="zx9__content">
+      <h2 class="zx9__title">zx9&NewLine;speaker</h2>
+      <p class="zx9__description">
+        Upgrade to premium speakers that are phenomenally built to deliver truly
+        remarkable sound.
+      </p>
+      <a routerLink="../zx9" class="zx9__anchor">See Product</a>
+    </div>
+  </div>
 </div>

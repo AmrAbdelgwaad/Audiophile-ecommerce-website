@@ -1,3 +1,7 @@
+@use "../../../styles/globals" as g;
+
+// banner
+
 .banner {
   background: url("../../../assets/images/home/mobile/image-header.jpg")
     no-repeat;
@@ -39,17 +43,9 @@
 }
 
 .banner__anchor {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  width: 10.2rem;
-  padding: 0.94rem 1.84rem 0.94rem 1.97rem;
+  @include g.anchor;
   color: var(--clr-white-900);
   background-color: var(--clr-primary);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.0625rem;
-  text-transform: uppercase;
   &:hover {
     background-color: var(--crl-primary-hover);
   }
@@ -57,6 +53,52 @@
 
 .bg-white {
   background-color: var(--clr-white-800);
+}
+
+// ZX9
+
+.zx9{
+  padding: 3.44rem 0 ;
+  margin: 0 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--clr-primary)  url("../../../assets/images/home/desktop/pattern-circles.svg") no-repeat;
+  background-size: 20rem;
+  background-position: center top;
+}
+
+.zx9__image{
+  margin: 0 auto;
+  max-width: 10.7655rem;
+}
+
+.zx9__title{
+  margin: 2rem 0 1.5rem;
+  text-align: center;
+  color: var(--clr-white-900);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.08038rem;
+  text-transform: uppercase;
+  white-space: pre-line;
+}
+
+.zx9__description{
+  margin: 0 1.5rem 1.5rem;
+  color: var(--clr-white-900);
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.zx9__anchor{
+  @include g.anchor;
+  color: var(--clr-white-900);
+  background-color: var(--clr-black-900);
+  &:hover {
+    background-color: var(--clr-grey);
+  }
 }
 
 @media (min-width: 43em) {
@@ -78,6 +120,29 @@
   }
   .banner__description {
     margin: 1.5rem 13rem 2.5rem;
+  }
+
+  // ZX9
+
+  .zx9{
+    padding: 3.2rem 0 4rem;
+    margin: 0 auto;
+    width: 43.0625rem;
+    background-size: cover;
+  }
+
+  .zx9__image{
+    max-width: 12.32575rem;
+  }
+
+  .zx9__title{
+    margin-top: 4rem;
+    font-size: 3.5rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .zx9__description {
+    margin: 0 10.65rem 2.5rem;
   }
 }
 
@@ -105,6 +170,35 @@
     width: 21.8125rem;
   }
   .banner__anchor {
+    margin: 0;
+  }
+  // ZX9
+
+  .zx9{
+    padding: 0;
+    display: flex;
+    width: 69.375rem;
+    background-size: 45rem;
+    background-position: left center;
+    overflow: hidden;
+  }
+  .zx9__image{
+    max-width: 25.63963rem;
+    height: 30.8125rem;
+    margin: 6rem 0 -1rem 7.34rem;
+  }
+  .zx9__content{
+    margin: 8.31rem 5.94rem 7.75rem 8.64rem;
+  }
+  .zx9__title {
+    margin: 0;
+    text-align: left;
+  }
+  .zx9__description{
+    margin: 1.5rem 0 2.5rem;
+    text-align: left;
+  }
+  .zx9__anchor{
     margin: 0;
   }
 }
