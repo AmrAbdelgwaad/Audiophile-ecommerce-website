@@ -127,6 +127,7 @@
 
 .product-anchor {
   @include g.anchor;
+  width: 10.5rem;
   margin: 0 0 0 1.59rem;
   color: var(--clr-black-900);
   background-color: transparent;
