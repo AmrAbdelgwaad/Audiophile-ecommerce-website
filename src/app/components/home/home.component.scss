@@ -122,13 +122,9 @@
   text-transform: uppercase;
 }
 
-.zx7__anchor-wrap {
-  margin-left: 1.5rem;
-}
-
 .zx7__anchor {
   @include g.anchor;
-  margin: 0;
+  margin: 0 0 0 1.5rem;
   color: var(--clr-black-900);
   background-color: transparent;
   border: var(--border-black);
@@ -195,7 +191,7 @@
     margin-left: 3.89rem;
   }
 
-  .zx7__anchor-wrap {
+  .zx7__anchor {
     margin-left: 3.98rem;
   }
 }
@@ -269,7 +265,7 @@
     margin-left: 5.94rem;
   }
 
-  .zx7__anchor-wrap {
+  .zx7__anchor {
     margin-left: 6.03rem;
   }
 }
