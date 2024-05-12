@@ -94,6 +94,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [google-webfonts-helper](https://gwfh.mranftl.com/fonts) - I used this to import the fonts locally
 - [webcode.tools](https://webcode.tools/css-generator/keyframe-animation) - To generate css animations
+- [codpen.io](https://codepen.io/sosuke/pen/Pjoqqp) - I used this pen to change svg colors  using filter property
+
 ## Author:
 
 - [LinkedIn](https://www.linkedin.com/in/amrabelgawad/)
