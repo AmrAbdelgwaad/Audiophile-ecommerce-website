@@ -1,6 +1,11 @@
 <div class="footer">
   <div class="footer__nav">
-    <a routerLink="home" routerLinkActive="" ariaCurrentWhenActive="page">
+    <a
+      routerLink="home"
+      routerLinkActive=""
+      ariaCurrentWhenActive="page"
+      (click)="scrollToTop()"
+    >
       <img
         ngSrc="assets/images/shared/desktop/logo.svg"
         width="143"
@@ -13,7 +18,11 @@
 
     <ul class="nav">
       <li>
-        <a routerLink="home" routerLinkActive="" ariaCurrentWhenActive="page"
+        <a
+          routerLink="home"
+          routerLinkActive=""
+          ariaCurrentWhenActive="page"
+          (click)="scrollToTop()"
           >home</a
         >
       </li>
@@ -22,6 +31,7 @@
           routerLink="headphones"
           routerLinkActive=""
           ariaCurrentWhenActive="page"
+          (click)="scrollToTop()"
           >headphones</a
         >
       </li>
@@ -30,6 +40,7 @@
           routerLink="speakers"
           routerLinkActive=""
           ariaCurrentWhenActive="page"
+          (click)="scrollToTop()"
           >speakers</a
         >
       </li>
@@ -38,6 +49,7 @@
           routerLink="earphones"
           routerLinkActive=""
           ariaCurrentWhenActive="page"
+          (click)="scrollToTop()"
           >earphones</a
         >
       </li>
