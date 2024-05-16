@@ -1,1 +1,76 @@
-<p>speakers works!</p>
+<h1 class="header">speakers</h1>
+
+<div class="flex">
+  <picture>
+    <source
+      srcset="
+        assets/images/product-zx9-speaker/desktop/image-category-page-preview.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-zx9-speaker/tablet/image-category-page-preview.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-zx9-speaker/mobile/image-category-page-preview.jpg"
+      width="654"
+      height="704"
+      alt="A black Zx9 speaker with a modern look, featuring a flat top and a textured band encircling the base."
+      class="flex__image"
+      priority
+    />
+  </picture>
+
+  <div class="flex__content">
+    <h2 class="flex__title"><span>new product</span>zx9 speaker</h2>
+
+    <p class="flex__description">
+      Upgrade your sound system with the all new ZX9 active speaker. It’s a
+      bookshelf speaker system that offers truly wireless connectivity --
+      creating new possibilities for more pleasing and practical audio setups.
+    </p>
+    <a routerLink="../zx9" class="flex__anchor">see product</a>
+  </div>
+</div>
+
+<div class="flex flex-reverse">
+  <picture>
+    <source
+      srcset="
+        assets/images/product-zx7-speaker/desktop/image-category-page-preview.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-zx7-speaker/tablet/image-category-page-preview.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-zx7-speaker/mobile/image-category-page-preview.jpg"
+      width="654"
+      height="704"
+      alt="A dark grey zx7 speaker resting on a white background."
+      class="flex__image"
+      priority
+    />
+  </picture>
+
+  <div class="flex__content">
+    <h2 class="flex__title title-second">zx7 speaker</h2>
+
+    <p class="flex__description">
+      Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf
+      speaker uses high-end audiophile components that represents the top of the
+      line powered speakers for home or studio use.
+    </p>
+    <a routerLink="../zx7" class="flex__anchor">see product</a>
+  </div>
+</div>
+
+<app-main-links></app-main-links>
+<app-shared-card></app-shared-card>

@@ -1,1 +1,40 @@
-<p>earphones works!</p>
+<h1 class="header">earphones</h1>
+
+<div class="flex">
+  <picture>
+    <source
+      srcset="
+        assets/images/product-yx1-earphones/desktop/image-category-page-preview.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-yx1-earphones/tablet/image-category-page-preview.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-yx1-earphones/mobile/image-category-page-preview.jpg"
+      width="654"
+      height="704"
+      alt="A pair of black wireless earbuds resting in a black charging case. The earbuds have a sleek, in-ear design. There is a small, white 'S' printed on the side of each earbud."
+      class="flex__image"
+      priority
+    />
+  </picture>
+
+  <div class="flex__content">
+    <h2 class="flex__title"><span>new product</span>yx1 wireless earphones</h2>
+
+    <p class="flex__description">
+      Tailor your listening experience with bespoke dynamic drivers from the new
+      YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy
+      environments with its active noise cancellation feature.
+    </p>
+    <a routerLink="../yx1" class="flex__anchor">see product</a>
+  </div>
+</div>
+
+<app-main-links></app-main-links>
+<app-shared-card></app-shared-card>

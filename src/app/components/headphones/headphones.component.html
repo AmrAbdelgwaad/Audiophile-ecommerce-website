@@ -1,1 +1,112 @@
-<p>headphones works!</p>
+<h1 class="header">headphones</h1>
+
+<div class="flex">
+  <picture>
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg"
+      width="654"
+      height="704"
+      alt="A pair of black XX99 Mark II headphones resting on a white background."
+      class="flex__image"
+      priority
+    />
+  </picture>
+
+  <div class="flex__content">
+    <h2 class="flex__title"><span>new product</span>xx99 mark ii headphones</h2>
+
+    <p class="flex__description">
+      The new XX99 Mark II headphones is the pinnacle of pristine audio. It
+      redefines your premium headphone experience by reproducing the balanced
+      depth and precision of studio-quality sound.
+    </p>
+    <a routerLink="../xx99ii" class="flex__anchor">see product</a>
+  </div>
+</div>
+
+<div class="flex flex-reverse">
+  <picture>
+    <source
+      srcset="
+        assets/images/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg"
+      width="654"
+      height="704"
+      alt="A pair of black and gold black XX99 Mark I headphones resting on a white background."
+      class="flex__image"
+      priority
+    />
+  </picture>
+
+  <div class="flex__content">
+    <h2 class="flex__title title-second">xx99 mark i headphones</h2>
+
+    <p class="flex__description">
+      As the gold standard for headphones, the classic XX99 Mark I offers
+      detailed and accurate audio reproduction for audiophiles, mixing
+      engineers, and music aficionados alike in studios and on the go.
+    </p>
+    <a routerLink="../xx99i" class="flex__anchor">see product</a>
+  </div>
+</div>
+
+<div class="flex">
+  <picture>
+    <source
+      srcset="
+        assets/images/product-xx59-headphones/desktop/image-category-page-preview.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-xx59-headphones/tablet/image-category-page-preview.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx59-headphones/mobile/image-category-page-preview.jpg"
+      width="654"
+      height="704"
+      alt="A pair of white XX59 headphones on a white background."
+      class="flex__image"
+      priority
+    />
+  </picture>
+
+  <div class="flex__content">
+    <h2 class="flex__title title-second">xx59 headphones</h2>
+
+    <p class="flex__description">
+      Enjoy your audio almost anywhere and customize it to your specific tastes
+      with the XX59 headphones. The stylish yet durable versatile wireless
+      headset is a brilliant companion at home or on the move.
+    </p>
+    <a routerLink="../xx59" class="flex__anchor">see product</a>
+  </div>
+</div>
+
+<app-main-links></app-main-links>
+<app-shared-card></app-shared-card>
