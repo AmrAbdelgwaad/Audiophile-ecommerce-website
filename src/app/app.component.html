@@ -42,7 +42,7 @@
       <ul class="nav__list">
         <li>
           <a routerLink="home" routerLinkActive="" ariaCurrentWhenActive="page"
-          >home</a
+            >home</a
           >
         </li>
         <li>
@@ -50,7 +50,7 @@
             routerLink="headphones"
             routerLinkActive=""
             ariaCurrentWhenActive="page"
-          >headphones</a
+            >headphones</a
           >
         </li>
         <li>
@@ -58,7 +58,7 @@
             routerLink="speakers"
             routerLinkActive=""
             ariaCurrentWhenActive="page"
-          >speakers</a
+            >speakers</a
           >
         </li>
         <li>
@@ -66,7 +66,7 @@
             routerLink="earphones"
             routerLinkActive=""
             ariaCurrentWhenActive="page"
-          >earphones</a
+            >earphones</a
           >
         </li>
       </ul>
@@ -81,34 +81,33 @@
     </button>
   </div>
   <div class="menu" id="menu" [attr.data-visible]="menuOpened">
-
-      <div>
-        <a
-          routerLink="headphones"
-          routerLinkActive=""
-          ariaCurrentWhenActive="page"
-          (click)="menuOpened = false"
-          class="menu__link"
-        >
+    <div>
+      <a
+        routerLink="headphones"
+        routerLinkActive=""
+        ariaCurrentWhenActive="page"
+        (click)="menuOpened = false"
+        class="menu__link"
+      >
+        <img
+          ngSrc="assets/images/shared/desktop/image-category-thumbnail-headphones.png"
+          width="438"
+          height="422"
+          class="menu__img"
+          alt=""
+        />
+        headphones
+        <span
+          >shop
           <img
-            ngSrc="assets/images/shared/desktop/image-category-thumbnail-headphones.png"
-            width="438"
-            height="422"
-            class="menu__img"
+            ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
+            width="8"
+            height="12"
+            class="arrow"
             alt=""
-          />
-          headphones
-          <span
-            >shop
-            <img
-              ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
-              width="8"
-              height="12"
-              class="arrow"
-              alt=""
-          /></span>
-        </a>
-      </div>
+        /></span>
+      </a>
+    </div>
     <div>
       <a
         routerLink="speakers"
@@ -166,12 +165,24 @@
   </div>
 </header>
 
-
 <main>
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </main>
 
+<a
+  routerLink="checkout"
+  routerLinkActive=""
+  #checkout="routerLinkActive"
+  ariaCurrentWhenActive="page"
+  aria-hidden="true"
+>
+</a>
+
+@if(!home.isActive && !checkout.isActive){
+<app-main-links></app-main-links>
+<app-shared-card></app-shared-card>
+}
 
 <footer>
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </footer>

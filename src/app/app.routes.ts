@@ -69,5 +69,13 @@ export const routes: Routes = [
       import('./products/yx1/yx1.component').then((m) => m.Yx1Component),
     title: 'Audiophile | YX1 Earphone',
   },
+  {
+    path: 'checkout',
+    loadComponent: () =>
+      import('./components/checkout/checkout.component').then(
+        (m) => m.CheckoutComponent,
+      ),
+    title: 'Audiophile | Checkout',
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
