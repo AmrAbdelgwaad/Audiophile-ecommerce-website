@@ -1,1 +1,165 @@
-<p>xx99ii works!</p>
+<div class="product">
+  <div>
+    <a href="javascript:history.back()" class="product__anchor">Go Back</a>
+
+    <picture>
+      <source
+        srcset="
+          assets/images/product-xx99-mark-two-headphones/desktop/image-product.jpg
+        "
+        media="(min-width: 75em)"
+      />
+      <source
+        srcset="
+          assets/images/product-xx99-mark-two-headphones/tablet/image-product.jpg
+        "
+        media="(min-width: 43em)"
+      />
+      <img
+        ngSrc="assets/images/product-xx99-mark-two-headphones/mobile/image-product.jpg"
+        width="654"
+        height="654"
+        alt="A pair of black XX99 Mark II headphones resting on a white background."
+        class="product__img"
+      />
+    </picture>
+  </div>
+  <div>
+    <h1 class="product__header">xx99 mark ii headphones</h1>
+
+    <p class="product__description">
+      The new XX99 Mark II headphones is the pinnacle of pristine audio. It
+      redefines your premium headphone experience by reproducing the balanced
+      depth and precision of studio-quality sound.
+    </p>
+
+    <p aria-label="Price: 2,999 US dollars" class="product__price">$ 2,999</p>
+
+    @if (quantity === 0) {
+    <button (click)="addToCart()" class="product__btn">Add to Cart</button>
+    } @else {
+    <div class="product__btn">
+      <button
+        [attr.aria-label]="
+          'Decrease quantity black XX99 Mark II headphones, Current quantity ' +
+          quantity
+        "
+        (click)="decrement()"
+        class="decrease__btn"
+      >
+        -
+      </button>
+      <span> @if (quantity === 12) { Max } {{ quantity }}</span>
+      <button
+        [attr.aria-label]="
+          'Increase quantity black XX99 Mark II headphones, Current quantity ' +
+          quantity
+        "
+        (click)="increment()"
+        [disabled]="quantity === 12"
+        class="increase__btn"
+      >
+        +
+      </button>
+    </div>
+    }
+  </div>
+</div>
+
+<div class="info">
+  <div>
+    <h2 class="info__title">features</h2>
+    <p class="info__description">
+      Featuring a genuine leather head strap and premium earcups, these
+      headphones deliver superior comfort for those who like to enjoy endless
+      listening. It includes intuitive controls designed for any situation.
+      Whether you’re taking a business call or just in your own personal space,
+      the auto on/off and pause features ensure that you’ll never miss a beat.
+      <span>
+        The advanced Active Noise Cancellation with built-in equalizer allow you
+        to experience your audio world on your terms. It lets you enjoy your
+        audio in peace, but quickly interact with your surroundings when you
+        need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour
+        battery life, the XX99 Mark II headphones gives you superior sound,
+        cutting-edge technology, and a modern design aesthetic.</span
+      >
+    </p>
+  </div>
+  <div>
+    <h2 class="info__title">in the box</h2>
+    <p class="info__list">
+      <span class="list-item"><span>1x</span>Headphone Unit</span>
+      <span class="list-item"><span>1x</span>Replacement Earcups</span>
+      <span class="list-item"><span>1x</span>User Manual</span>
+      <span class="list-item"><span>1x</span>3.5mm 5m Audio Cable</span>
+      <span class="list-item"><span>1x</span>Travel Bag</span>
+    </p>
+  </div>
+</div>
+
+<div class="gallery">
+  <picture class="img-1">
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+  <picture class="img-2">
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+
+  <picture class="img-3">
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg
+      "
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="
+        assets/images/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg
+      "
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg"
+      width="654"
+      height="736"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+</div>

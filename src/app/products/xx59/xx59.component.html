@@ -1,1 +1,149 @@
-<p>xx59 works!</p>
+<div class="product">
+  <div>
+    <a href="javascript:history.back()" class="product__anchor">Go Back</a>
+
+    <picture>
+      <source
+        srcset="assets/images/product-xx59-headphones/desktop/image-product.jpg"
+        media="(min-width: 75em)"
+      />
+      <source
+        srcset="assets/images/product-xx59-headphones/tablet/image-product.jpg"
+        media="(min-width: 43em)"
+      />
+      <img
+        ngSrc="assets/images/product-xx59-headphones/mobile/image-product.jpg"
+        width="654"
+        height="654"
+        alt="A pair of white XX59 headphones on a white background."
+        class="product__img"
+      />
+    </picture>
+  </div>
+  <div>
+    <h1 class="product__header">xx59 headphones</h1>
+
+    <p class="product__description">
+      Enjoy your audio almost anywhere and customize it to your specific tastes
+      with the XX59 headphones. The stylish yet durable versatile wireless
+      headset is a brilliant companion at home or on the move.
+    </p>
+
+    <p aria-label="Price: 899 US dollars" class="product__price">$ 899</p>
+
+    @if (quantity === 0) {
+    <button (click)="addToCart()" class="product__btn">Add to Cart</button>
+    } @else {
+    <div class="product__btn">
+      <button
+        [attr.aria-label]="
+          'Decrease quantity white XX59 headphones, Current quantity ' +
+          quantity
+        "
+        (click)="decrement()"
+        class="decrease__btn"
+      >
+        -
+      </button>
+      <span> @if (quantity === 12) { Max } {{ quantity }}</span>
+      <button
+        [attr.aria-label]="
+          'Increase quantity white XX59 headphones, Current quantity ' +
+          quantity
+        "
+        (click)="increment()"
+        [disabled]="quantity === 12"
+        class="increase__btn"
+      >
+        +
+      </button>
+    </div>
+    }
+  </div>
+</div>
+
+<div class="info">
+  <div>
+    <h2 class="info__title">features</h2>
+    <p class="info__description">
+      These headphones have been created from durable, high-quality materials
+      tough enough to take anywhere. Its compact folding design fuses comfort
+      and minimalist style making it perfect for travel. Flawless transmission
+      is assured by the latest wireless technology engineered for audio
+      synchronization with videos.
+      <span>
+        More than a simple pair of headphones, this headset features a pair of
+        built-in microphones for clear, hands-free calling when paired with a
+        compatible smartphone. Controlling music and calls is also intuitive
+        thanks to easy-access touch buttons on the earcups. Regardless of how
+        you use the XX59 headphones, you can do so all day thanks to an
+        impressive 30-hour battery life that can be rapidly recharged via
+        USB-C.</span
+      >
+    </p>
+  </div>
+  <div>
+    <h2 class="info__title">in the box</h2>
+    <p class="info__list">
+      <span class="list-item"><span>1x</span>Headphone Unit</span>
+      <span class="list-item"><span>1x</span>Replacement Earcups</span>
+      <span class="list-item"><span>1x</span>User Manual</span>
+      <span class="list-item"><span>1x</span>3.5mm 5m Audio Cable</span>
+    </p>
+  </div>
+</div>
+
+<div class="gallery">
+  <picture class="img-1">
+    <source
+      srcset="assets/images/product-xx59-headphones/desktop/image-gallery-1.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-xx59-headphones/tablet/image-gallery-1.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx59-headphones/mobile/image-gallery-1.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+  <picture class="img-2">
+    <source
+      srcset="assets/images/product-xx59-headphones/desktop/image-gallery-2.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-xx59-headphones/tablet/image-gallery-2.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx59-headphones/mobile/image-gallery-2.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+
+  <picture class="img-3">
+    <source
+      srcset="assets/images/product-xx59-headphones/desktop/image-gallery-3.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-xx59-headphones/tablet/image-gallery-3.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-xx59-headphones/mobile/image-gallery-3.jpg"
+      width="654"
+      height="736"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+</div>

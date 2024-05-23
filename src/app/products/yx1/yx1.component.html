@@ -1,1 +1,147 @@
-<p>yx1 works!</p>
+<div class="product">
+  <div>
+    <a href="javascript:history.back()" class="product__anchor">Go Back</a>
+
+    <picture>
+      <source
+        srcset="assets/images/product-yx1-earphones/desktop/image-product.jpg"
+        media="(min-width: 75em)"
+      />
+      <source
+        srcset="assets/images/product-yx1-earphones/tablet/image-product.jpg"
+        media="(min-width: 43em)"
+      />
+      <img
+        ngSrc="assets/images/product-yx1-earphones/mobile/image-product.jpg"
+        width="654"
+        height="654"
+        alt="A pair of black wireless earbuds resting in a black charging case. The earbuds have a sleek, in-ear design. There is a small, white 'S' printed on the side of each earbud."
+        class="product__img"
+      />
+    </picture>
+  </div>
+  <div>
+    <h1 class="product__header">yx1 wireless earphones</h1>
+
+    <p class="product__description">
+      Tailor your listening experience with bespoke dynamic drivers from the new
+      YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy
+      environments with its active noise cancellation feature.
+    </p>
+
+    <p aria-label="Price: 599 US dollars" class="product__price">$ 599</p>
+
+    @if (quantity === 0) {
+    <button (click)="addToCart()" class="product__btn">Add to Cart</button>
+    } @else {
+    <div class="product__btn">
+      <button
+        [attr.aria-label]="
+          'Decrease quantity black yx1 earphones, Current quantity ' + quantity
+        "
+        (click)="decrement()"
+        class="decrease__btn"
+      >
+        -
+      </button>
+      <span> @if (quantity === 12) { Max } {{ quantity }}</span>
+      <button
+        [attr.aria-label]="
+          'Increase quantity black yx1 earphones, Current quantity ' + quantity
+        "
+        (click)="increment()"
+        [disabled]="quantity === 12"
+        class="increase__btn"
+      >
+        +
+      </button>
+    </div>
+    }
+  </div>
+</div>
+
+<div class="info">
+  <div>
+    <h2 class="info__title">features</h2>
+    <p class="info__description">
+      Experience unrivalled stereo sound thanks to innovative acoustic
+      technology. With improved ergonomics designed for full day wearing, these
+      revolutionary earphones have been finely crafted to provide you with the
+      perfect fit, delivering complete comfort all day long while enjoying
+      exceptional noise isolation and truly immersive sound.
+      <span>
+        The YX1 Wireless Earphones features customizable controls for volume,
+        music, calls, and voice assistants built into both earbuds. The new
+        7-hour battery life can be extended up to 28 hours with the charging
+        case, giving you uninterrupted play time. Exquisite craftsmanship with a
+        splash resistant design now available in an all new white and grey color
+        scheme as well as the popular classic black.</span
+      >
+    </p>
+  </div>
+  <div>
+    <h2 class="info__title">in the box</h2>
+    <p class="info__list">
+      <span class="list-item"><span>2x</span>Earphone Unit</span>
+      <span class="list-item"><span>6x</span>Multi-size Earplugs</span>
+      <span class="list-item"><span>1x</span>User Manual</span>
+      <span class="list-item"><span>1x</span>USB-C Charging Cable</span>
+      <span class="list-item"><span>1x</span>Travel Pouch</span>
+    </p>
+  </div>
+</div>
+
+<div class="gallery">
+  <picture class="img-1">
+    <source
+      srcset="assets/images/product-yx1-earphones/desktop/image-gallery-1.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-yx1-earphones/tablet/image-gallery-1.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-yx1-earphones/mobile/image-gallery-1.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+  <picture class="img-2">
+    <source
+      srcset="assets/images/product-yx1-earphones/desktop/image-gallery-2.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-yx1-earphones/tablet/image-gallery-2.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-yx1-earphones/mobile/image-gallery-2.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+
+  <picture class="img-3">
+    <source
+      srcset="assets/images/product-yx1-earphones/desktop/image-gallery-3.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-yx1-earphones/tablet/image-gallery-3.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-yx1-earphones/mobile/image-gallery-3.jpg"
+      width="654"
+      height="736"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+</div>

@@ -1,0 +1,257 @@
+@use "../styles/globals" as g;
+
+.product {
+  margin-bottom: 5.5rem;
+}
+
+.product__anchor {
+  display: block;
+  margin: 1rem 0 1.5rem 1.5rem;
+  color: var(--clr-grey);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  &:hover {
+    color: var(--clr-primary);
+  }
+}
+
+.product__img {
+  margin-left: 1.5rem;
+  width: min(20.4375rem, 90vw);
+}
+
+.product__header {
+  margin: 2.5rem 0 1.5rem 1.5rem;
+  color: var(--clr-black-900);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+}
+
+.product__description {
+  margin-left: 1.5rem;
+  color: var(--clr-grey);
+  font-size: 0.9375rem;
+  line-height: 1.66;
+  font-weight: 400;
+}
+
+.product__price {
+  margin: 1.5rem 0 1.94rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.08038rem;
+}
+
+.product__btn {
+  @include g.anchor;
+  margin: 0 0 0 1.5rem;
+  width: 12rem;
+  color: var(--clr-white-900);
+  background-color: var(--clr-primary);
+}
+
+.decrease__btn {
+  color: var(--clr-white-900);
+  margin-right: 2rem;
+}
+
+.increase__btn {
+  color: var(--clr-white-900);
+  margin-left: 2rem;
+  &:disabled {
+    color: hsl(0, 0%, 43%);
+    cursor: not-allowed;
+  }
+}
+
+// Info
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+}
+
+.info__title {
+  margin: 0 0 1.5rem 1.5rem;
+  color: var(--clr-black-900);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05356rem;
+  text-transform: uppercase;
+}
+
+.info__description {
+  margin: 0 1.5rem;
+  color: var(--clr-grey);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.66;
+  span {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+.info__list {
+  margin-left: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.list-item {
+  color: var(--clr-grey);
+  span {
+    color: var(--clr-primary);
+    margin-right: 1.5rem;
+  }
+}
+
+// gallery
+
+.gallery {
+  margin: 7.5rem 0;
+  display: grid;
+  gap: 1.27rem;
+}
+
+.gallery__img {
+  width: 20.4375rem;
+  margin-left: 1.5rem;
+  border-radius: 0.5rem;
+}
+@media (min-width: 43em) {
+  .product {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 4.34rem;
+    margin-bottom: 10.31rem;
+  }
+  .product__anchor {
+    margin: 2.06rem 0 1.5rem 2.5rem;
+  }
+  .product__img {
+    margin-left: 2.44rem;
+    max-width: 17.5625rem;
+  }
+  .product__header {
+    margin: 10rem 0 2rem 0;
+  }
+  .product__description {
+    margin-left: 0;
+  }
+  .product__price {
+    margin: 2rem 0 1.94rem 0;
+  }
+
+  .product__btn {
+    margin-left: 0;
+  }
+
+  // Info
+
+  .info {
+    gap: 7.5rem;
+  }
+  .info__title {
+    font-size: 2rem;
+    margin-left: 2.5rem;
+  }
+  .info__description {
+    margin-left: 2.5rem;
+  }
+  .info__list {
+    margin-left: 2.5rem;
+  }
+
+  // gallery
+
+  .gallery {
+    grid-template-areas:
+      "img1 img3"
+      "img2 img3";
+    justify-content: left;
+    margin-left: 2.4375rem;
+  }
+  .gallery__img {
+    margin-left: 0;
+    width: unset;
+  }
+  .img-1 {
+    grid-area: img1;
+    width: 17.3125rem;
+  }
+  .img-2 {
+    grid-area: img2;
+    width: 17.3125rem;
+  }
+  .img-3 {
+    grid-area: img3;
+    width: 24.6875rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .product {
+    width: 69.375rem;
+    gap: 7.81rem;
+    margin: 0 auto 14.75rem;
+  }
+  .product__anchor {
+    margin: 4.94rem 0 3.5rem 0;
+  }
+  .product__img {
+    width: unset;
+    max-width: 33.75rem;
+    margin-left: 0;
+  }
+  .product__header {
+    font-size: 2.5rem;
+    margin: 17rem 0 2rem 0;
+    width: 27.8125rem;
+  }
+  .product__description {
+    width: 27.8125rem;
+  }
+  // Info
+  .info {
+    flex-direction: row;
+    width: 69.375rem;
+    margin: 0 auto;
+    gap: 7.81rem;
+  }
+  .info__title {
+    margin: 0 0 2rem 0;
+  }
+  .info__description {
+    width: 39.6875rem;
+    margin-left: 0;
+  }
+  .info__list {
+    margin-left: 0;
+  }
+
+  // gallery
+
+  .gallery {
+    justify-content: center;
+    margin-left: 0;
+    gap: 1.875rem;
+  }
+  .gallery__img {
+    margin-left: 0;
+    width: unset;
+  }
+  .img-1 {
+    width: 27.8125rem;
+  }
+  .img-2 {
+    width: 27.8125rem;
+  }
+  .img-3 {
+    width: 39.6875rem;
+  }
+}

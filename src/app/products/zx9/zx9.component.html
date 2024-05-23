@@ -1,1 +1,147 @@
-<p>zx9 works!</p>
+<div class="product">
+  <div>
+    <a href="javascript:history.back()" class="product__anchor">Go Back</a>
+
+    <picture>
+      <source
+        srcset="assets/images/product-zx9-speaker/desktop/image-product.jpg"
+        media="(min-width: 75em)"
+      />
+      <source
+        srcset="assets/images/product-zx9-speaker/tablet/image-product.jpg"
+        media="(min-width: 43em)"
+      />
+      <img
+        ngSrc="assets/images/product-zx9-speaker/mobile/image-product.jpg"
+        width="654"
+        height="654"
+        alt="A black Zx9 speaker with a modern look, featuring a flat top and a textured band encircling the base."
+        class="product__img"
+      />
+    </picture>
+  </div>
+  <div>
+    <h1 class="product__header">zx9 speaker</h1>
+
+    <p class="product__description">
+      Upgrade your sound system with the all new ZX9 active speaker. It’s a
+      bookshelf speaker system that offers truly wireless connectivity --
+      creating new possibilities for more pleasing and practical audio setups.
+    </p>
+
+    <p aria-label="Price: 4,500 US dollars" class="product__price">$ 4,500</p>
+
+    @if (quantity === 0) {
+    <button (click)="addToCart()" class="product__btn">Add to Cart</button>
+    } @else {
+    <div class="product__btn">
+      <button
+        [attr.aria-label]="
+          'Decrease quantity black Zx9 speaker, Current quantity ' + quantity
+        "
+        (click)="decrement()"
+        class="decrease__btn"
+      >
+        -
+      </button>
+      <span> @if (quantity === 12) { Max } {{ quantity }}</span>
+      <button
+        [attr.aria-label]="
+          'Increase quantity black Zx9 speaker, Current quantity ' + quantity
+        "
+        (click)="increment()"
+        [disabled]="quantity === 12"
+        class="increase__btn"
+      >
+        +
+      </button>
+    </div>
+    }
+  </div>
+</div>
+
+<div class="info">
+  <div>
+    <h2 class="info__title">features</h2>
+    <p class="info__description">
+      Connect via Bluetooth or nearly any wired source. This speaker features
+      optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs,
+      allowing you to have up to five wired source devices connected for easy
+      switching. Improved bluetooth technology offers near lossless audio
+      quality at up to 328ft (100m).
+      <span>
+        Discover clear, more natural sounding highs than the competition with
+        ZX9’s signature planar diaphragm tweeter. Equally important is its
+        powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit.
+        You’ll be able to enjoy equal sound quality whether in a large room or
+        small den. Furthermore, you will experience new sensations from old
+        songs since it can respond to even the subtle waveforms.</span
+      >
+    </p>
+  </div>
+  <div>
+    <h2 class="info__title">in the box</h2>
+    <p class="info__list">
+      <span class="list-item"><span>2x</span>Speaker Unit</span>
+      <span class="list-item"><span>2x</span>Speaker Cloth Panel</span>
+      <span class="list-item"><span>1x</span>User Manual</span>
+      <span class="list-item"><span>1x</span>3.5mm 10m Audio Cable</span>
+      <span class="list-item"><span>1x</span>10m Optical Cable</span>
+    </p>
+  </div>
+</div>
+
+<div class="gallery">
+  <picture class="img-1">
+    <source
+      srcset="assets/images/product-zx9-speaker/desktop/image-gallery-1.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-zx9-speaker/tablet/image-gallery-1.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-zx9-speaker/mobile/image-gallery-1.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+  <picture class="img-2">
+    <source
+      srcset="assets/images/product-zx9-speaker/desktop/image-gallery-2.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-zx9-speaker/tablet/image-gallery-2.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-zx9-speaker/mobile/image-gallery-2.jpg"
+      width="654"
+      height="348"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+
+  <picture class="img-3">
+    <source
+      srcset="assets/images/product-zx9-speaker/desktop/image-gallery-3.jpg"
+      media="(min-width: 75em)"
+    />
+    <source
+      srcset="assets/images/product-zx9-speaker/tablet/image-gallery-3.jpg"
+      media="(min-width: 43em)"
+    />
+    <img
+      ngSrc="assets/images/product-zx9-speaker/mobile/image-gallery-3.jpg"
+      width="654"
+      height="736"
+      alt=""
+      class="gallery__img"
+    />
+  </picture>
+</div>
