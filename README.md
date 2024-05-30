@@ -11,7 +11,7 @@
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#auther)
+- [Author](#author)
 
 
 
@@ -54,7 +54,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Leaflet JS
 - Mobile-first workflow
 - Webstorm
 
@@ -70,9 +69,7 @@ To see how you can add code snippets, see below:
 <h1>Some HTML code I'm proud of</h1>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+
 ```
 ```js
 const proudOfThisFunc = () => {
@@ -95,7 +92,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [google-webfonts-helper](https://gwfh.mranftl.com/fonts) - I used this to import the fonts locally
 - [webcode.tools](https://webcode.tools/css-generator/keyframe-animation) - To generate css animations
 - [codpen.io](https://codepen.io/sosuke/pen/Pjoqqp) - I used this pen to change svg colors  using filter property
-
+- [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/) - How to build a modal
 ## Author:
 
 - [LinkedIn](https://www.linkedin.com/in/amrabelgawad/)
