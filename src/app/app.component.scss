@@ -43,6 +43,21 @@ header {
   width: 1.4375rem;
   height: 1.25rem;
   margin: 2.19rem 2.13rem 0 auto;
+ &:hover img{
+    filter: brightness(0) saturate(100%) invert(80%) sepia(47%) saturate(3119%)
+    hue-rotate(320deg) brightness(85%) contrast(100%);
+  }
+}
+
+.quantity{
+  position: absolute;
+  top: 24px;
+  margin-left: 4px;
+  color: white;
+  background: var(--clr-primary);
+  border-radius: 50%;
+  padding: 0.1rem 0.4rem;
+  font-size: 12px;
 }
 
 .menu[data-visible="false"] {
@@ -50,9 +65,8 @@ header {
 }
 
 .menu[data-visible="true"] {
-  background-color: var(--clr-white-900);
+ background-color: var(--clr-white-900);
   border-radius: 0 0 0.5rem 0.5rem;
-  padding: 1rem 0 2.19rem;
   animation: intro 700ms ease 0s 1 normal forwards;
 }
 @keyframes intro {
@@ -67,40 +81,9 @@ header {
   }
 }
 
-.menu__link {
-  display: block;
-  color: var(--clr-black-900);
-  text-align: center;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  letter-spacing: 0.06694rem;
-  text-transform: uppercase;
-  background-color: var(--clr-white-700);
-  width: min(20.4375rem, 90vw);
-  border-radius: 0.5rem;
-  margin: 4.25rem auto 0;
-  padding-top: 3.44rem;
-  span {
-    font-size: 0.8125rem;
-    color: hsla(0, 0%, 0%, 0.5);
-    display: block;
-    margin-top: 1.06rem;
-    padding-bottom: 1.38rem;
-    &:hover {
-      color: var(--clr-primary);
-    }
-  }
-  .arrow {
-    display: inline;
-    margin-left: 0.6rem;
-    width: 0.5125rem;
-    height: 0.625rem;
-  }
-}
 
-.menu__img {
-  max-width: 9.5rem;
-  margin: -7rem auto 0;
+.cart-modal[data-visible="false"] {
+  display: none;
 }
 
 @media (min-width: 43em) {
@@ -112,16 +95,6 @@ header {
     margin-top: 2rem;
   }
 
-  .menu[data-visible="true"] {
-    padding: 2.5rem 0 4.19rem;
-    display: flex;
-    justify-content: center;
-    column-gap: 0.62rem;
-  }
-
-  .menu__link {
-    width: 13.9375rem;
-  }
 }
 
 @media (min-width: 75em) {
@@ -137,6 +110,9 @@ header {
     margin: 2rem 0 0 auto;
   }
   .menu-btn {
+    display: none;
+  }
+  .menu{
     display: none;
   }
   .nav {

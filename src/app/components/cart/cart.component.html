@@ -1,0 +1,43 @@
+<div class="cart">
+  @if (cartItems.length === 0) {
+  <p class="cart__empty">cart is empty</p>
+  } @else {
+  <div class="flex-group">
+    <p class="cart__quantity">Cart ({{ totalQuantity }})</p>
+    <button (click)="clearCart()" class="cart__clear">Remove all</button>
+  </div>
+  @for (item of cartItems; track item.id) {
+  <div class="product">
+    <img
+      [ngSrc]="item.image"
+      alt="{{ item.name }}"
+      width="150"
+      height="150"
+      class="product__img"
+    />
+    <div class="product__content">
+      <p class="product__name">{{ item.name }}</p>
+      <p class="product__price">${{ item.price }}</p>
+    </div>
+    <div class="product__group">
+      <button (click)="decreaseQuantity(item.id)" class="product__group-btn">
+        -
+      </button>
+      <p class="product__quantity">
+        <span class="sr-only">Quantity:</span> {{ item.quantity }}
+      </p>
+      <button (click)="increaseQuantity(item.id)" class="product__group-btn">
+        +
+      </button>
+    </div>
+  </div>
+  }
+  <p class="cart__total">
+    <span>Total</span><span>$ {{ totalPrice }}</span>
+  </p>
+  <a routerLink="checkout" class="cart__anchor">checkout</a>
+  <!--   <h3>VAT (20%): ${{ vat.toFixed() }}</h3>
+      <h3>Shipping: ${{ shippingCost }}</h3>
+      <h3>Grand Total: ${{ grandTotal.toFixed() }}</h3>-->
+  }
+</div>

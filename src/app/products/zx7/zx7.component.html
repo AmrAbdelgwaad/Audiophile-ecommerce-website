@@ -40,19 +40,18 @@
           'Decrease quantity dark grey Zx7 speaker, Current quantity ' +
           quantity
         "
-        (click)="decrement()"
+        (click)="decreaseQuantity()"
         class="decrease__btn"
       >
         -
       </button>
-      <span> @if (quantity === 12) { Max } {{ quantity }}</span>
+      <span> <span class="sr-only">quantity:</span>{{ quantity }}</span>
       <button
         [attr.aria-label]="
           'Increase quantity dark grey Zx7 speaker, Current quantity ' +
           quantity
         "
-        (click)="increment()"
-        [disabled]="quantity === 12"
+        (click)="increaseQuantity()"
         class="increase__btn"
       >
         +

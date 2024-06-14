@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { Subscription } from 'rxjs';
+import { CartService } from '../../cart.service';
 
 @Component({
   selector: 'app-yx1',
@@ -8,20 +10,49 @@ import { NgOptimizedImage } from '@angular/common';
   templateUrl: './yx1.component.html',
   styleUrl: './yx1.component.scss',
 })
-export class Yx1Component {
+export class Yx1Component implements OnInit, OnDestroy {
+  product = {
+    id: 6,
+    name: 'YX1',
+    price: 599,
+    image: 'assets/images/cart/image-yx1-earphones.jpg',
+  };
   quantity: number = 0;
+  private cartSubscription!: Subscription;
 
-  addToCart() {
-    this.quantity = 1;
+  constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {
+    this.quantity = this.cartService.getProductQuantity(this.product.id);
+    this.cartSubscription = this.cartService.cart$.subscribe(() => {
+      this.quantity = this.cartService.getProductQuantity(this.product.id);
+    });
   }
 
-  increment() {
-    this.quantity++;
+  ngOnDestroy(): void {
+    if (this.cartSubscription) {
+      this.cartSubscription.unsubscribe();
+    }
   }
 
-  decrement() {
-    if (this.quantity > 0) {
-      this.quantity--;
+  addToCart(): void {
+    this.cartService.addToCart(this.product);
+  }
+
+  increaseQuantity(): void {
+    this.cartService.addToCart(this.product);
+  }
+
+  decreaseQuantity(): void {
+    const cartItems = this.cartService.getCartItems();
+    const existingProduct = cartItems.find(
+      (item) => item.id === this.product.id,
+    );
+    if (existingProduct && existingProduct.quantity > 0) {
+      this.cartService.updateQuantity(
+        this.product.id,
+        existingProduct.quantity - 1,
+      );
     }
   }
 }

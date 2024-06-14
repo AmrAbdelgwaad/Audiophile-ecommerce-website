@@ -32,7 +32,9 @@
     <p aria-label="Price: 899 US dollars" class="product__price">$ 899</p>
 
     @if (quantity === 0) {
-    <button (click)="addToCart()" class="product__btn">Add to Cart</button>
+    <button (click)="addToCart()" class="product__btn">
+      Add to Cart
+    </button>
     } @else {
     <div class="product__btn">
       <button
@@ -40,19 +42,18 @@
           'Decrease quantity white XX59 headphones, Current quantity ' +
           quantity
         "
-        (click)="decrement()"
+        (click)="decreaseQuantity()"
         class="decrease__btn"
       >
         -
       </button>
-      <span> @if (quantity === 12) { Max } {{ quantity }}</span>
+      <span> <span class="sr-only">quantity:</span>{{ quantity }}</span>
       <button
         [attr.aria-label]="
           'Increase quantity white XX59 headphones, Current quantity ' +
           quantity
         "
-        (click)="increment()"
-        [disabled]="quantity === 12"
+        (click)="increaseQuantity()"
         class="increase__btn"
       >
         +

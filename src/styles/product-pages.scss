@@ -55,14 +55,20 @@
 .decrease__btn {
   color: var(--clr-white-900);
   margin-right: 2rem;
+  border-radius: 50%;
+  padding: 0 .4rem;
+  &:hover{
+    background-color: var(--clr-black-700);
+  }
 }
 
 .increase__btn {
   color: var(--clr-white-900);
   margin-left: 2rem;
-  &:disabled {
-    color: hsl(0, 0%, 43%);
-    cursor: not-allowed;
+  border-radius: 50%;
+  padding: 0 .4rem;
+  &:hover{
+    background-color: var(--clr-black-700);
   }
 }
 

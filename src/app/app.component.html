@@ -1,5 +1,5 @@
-@if(menuOpened){
-<div class="overlay"></div>
+@if(menuOpened || cartOpened){
+<div class="overlay" (click)="cartOpened = false; menuOpened = false"></div>
 }
 
 <header [class.black]="home.isActive">
@@ -71,97 +71,27 @@
         </li>
       </ul>
     </nav>
-    <button aria-label="cart" class="cart">
+    <button
+      aria-label="cart"
+      aria-controls="cart"
+      [attr.aria-expanded]="cartOpened"
+      (click)="toggleCart()"
+      class="cart"
+    >
       <img
         ngSrc="assets/images/shared/desktop/icon-cart.svg"
         width="23"
         height="20"
         alt=""
       />
+      <span class="quantity"><span class="sr-only">total quantity:</span>{{ totalQuantity }}</span>
     </button>
   </div>
+  <div id="cart" class="cart-modal" [attr.data-visible]="cartOpened">
+    <app-cart></app-cart>
+  </div>
   <div class="menu" id="menu" [attr.data-visible]="menuOpened">
-    <div>
-      <a
-        routerLink="headphones"
-        routerLinkActive=""
-        ariaCurrentWhenActive="page"
-        (click)="menuOpened = false"
-        class="menu__link"
-      >
-        <img
-          ngSrc="assets/images/shared/desktop/image-category-thumbnail-headphones.png"
-          width="438"
-          height="422"
-          class="menu__img"
-          alt=""
-        />
-        headphones
-        <span
-          >shop
-          <img
-            ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
-            width="8"
-            height="12"
-            class="arrow"
-            alt=""
-        /></span>
-      </a>
-    </div>
-    <div>
-      <a
-        routerLink="speakers"
-        routerLinkActive=""
-        ariaCurrentWhenActive="page"
-        (click)="menuOpened = false"
-        class="menu__link"
-      >
-        <img
-          ngSrc="assets/images/shared/desktop/image-category-thumbnail-speakers.png"
-          width="438"
-          height="408"
-          class="menu__img"
-          alt=""
-        />
-        speakers
-        <span
-          >shop
-          <img
-            ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
-            width="8"
-            height="12"
-            class="arrow"
-            alt=""
-        /></span>
-      </a>
-    </div>
-    <div>
-      <a
-        routerLink="earphones"
-        routerLinkActive=""
-        ariaCurrentWhenActive="page"
-        (click)="menuOpened = false"
-        class="menu__link"
-      >
-        <img
-          ngSrc="assets/images/shared/desktop/image-category-thumbnail-earphones.png"
-          width="438"
-          height="380"
-          class="menu__img"
-          alt=""
-        />
-        earphones
-        <span
-          >shop
-          <img
-            ngSrc="assets/images/shared/desktop/icon-arrow-right.svg"
-            width="8"
-            height="12"
-            class="arrow"
-            alt=""
-        /></span>
-      </a>
-    </div>
+    <app-main-links></app-main-links>
   </div>
 </header>
 
