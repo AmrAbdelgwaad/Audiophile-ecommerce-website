@@ -26,9 +26,6 @@ export class CartComponent implements OnInit, OnDestroy {
       this.cartItems = cartItems;
       this.totalPrice = this.cartService.getTotalPrice();
       this.totalQuantity = this.cartService.getTotalQuantity();
-      /*this.vat = this.cartService.getVat();
-      this.shippingCost = this.cartService.getShippingCost();
-      this.grandTotal = this.cartService.getGrandTotal();*/
     });
   }
 
