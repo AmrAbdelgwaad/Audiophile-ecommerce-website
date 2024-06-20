@@ -1,1 +1,300 @@
-<p>checkout works!</p>
+@if (successMessage){
+<div class="overlay"></div>
+}
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="container">
+  <div class="form">
+    <h1>checkout</h1>
+    <p class="form__title billing">Billing details</p>
+    <div class="flex__inputs">
+      <div class="input-group">
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          aria-describedby="name-error"
+          class="input"
+        />
+        <label for="name" class="user-label">Name</label>
+        <span id="name-error" aria-live="polite">
+          @if (name?.invalid && (name?.dirty || name?.touched)) {
+          <span class="error">required*</span>
+          }
+        </span>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="email"
+          formControlName="email"
+          aria-describedby="email-error"
+          class="input"
+        />
+        <label for="email" class="user-label">Email Address</label>
+        <span id="email-error" aria-live="polite">
+          @if (email?.invalid && (email?.dirty || email?.touched)) { @if
+          (email?.hasError('required')) {
+          <span class="error">required*</span>
+          } @else if (email?.hasError('email')) {
+          <span class="error">Wrong format</span>
+          } }
+        </span>
+      </div>
+    </div>
+    <div class="input-group">
+      <input
+        type="text"
+        id="phone"
+        formControlName="phone"
+        aria-describedby="phone-error"
+        class="input"
+      />
+      <label for="phone" class="user-label">Phone Number</label>
+      <span id="phone-error" aria-live="polite">
+        @if (phone?.invalid && (phone?.dirty || phone?.touched)) {
+        <span class="error">required*</span>
+        }
+      </span>
+    </div>
+
+    <p class="form__title shipping">shipping info</p>
+
+    <div class="input-group">
+      <input
+        type="text"
+        id="address"
+        formControlName="address"
+        aria-describedby="address-error"
+        class="input wider"
+      />
+      <label for="phone" class="user-label">Your Address</label>
+      <span id="address-error" aria-live="polite">
+        @if (address?.invalid && (address?.dirty || address?.touched)) {
+        <span class="error">required*</span>
+        }
+      </span>
+    </div>
+
+    <div class="flex__inputs">
+      <div class="input-group">
+        <input
+          type="text"
+          id="zipCode"
+          formControlName="zipCode"
+          aria-describedby="zipCode-error"
+          class="input"
+        />
+        <label for="zipCode" class="user-label">zip code</label>
+        <span id="zipCode-error" aria-live="polite">
+          @if (zipCode?.invalid && (zipCode?.dirty || zipCode?.touched)) {
+          <span class="error">required*</span>
+          }
+        </span>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="city"
+          formControlName="city"
+          aria-describedby="city-error"
+          class="input"
+        />
+        <label for="city" class="user-label">city</label>
+        <span id="city-error" aria-live="polite">
+          @if (city?.invalid && (city?.dirty || city?.touched)) {
+          <span class="error">required*</span>
+          }
+        </span>
+      </div>
+    </div>
+
+    <select
+      formControlName="country"
+      aria-describedby="country-error"
+      class="input"
+    >
+      @for (country of countries; track country) {
+      <option value="" disabled selected hidden>country</option>
+      <option [value]="country">{{ country }}</option>
+      }
+    </select>
+    <span id="country-error" aria-live="polite">
+      @if (country?.invalid && (country?.dirty || country?.touched)) {
+      <span class="error">required*</span>
+      }
+    </span>
+
+    <p class="form__title payment">payment details</p>
+
+    <fieldset>
+      <legend>Payment Method</legend>
+
+      <div class="radio-group">
+        <input
+          type="radio"
+          id="e-money"
+          name="payment"
+          value="e-money"
+          class="radio-input"
+          formControlName="payment"
+          checked
+        />
+        <label for="e-money" class="radio-label">e-Money</label>
+      </div>
+
+      <div class="radio-group">
+        <input
+          type="radio"
+          id="cash"
+          name="payment"
+          value="cash"
+          class="radio-input"
+          formControlName="payment"
+        />
+        <label for="cash" class="radio-label">Cash on Delivery</label>
+      </div>
+    </fieldset>
+
+    @if (payment === 'e-money') {
+    <div class="flex__inputs">
+      <div class="input-group">
+        <input
+          type="text"
+          id="enum"
+          formControlName="enum"
+          aria-describedby="enum-error"
+          class="input"
+        />
+        <label for="enum" class="user-label">e-Money Number</label>
+        <span id="enum-error" aria-live="polite">
+          @if (enum?.invalid && (enum?.dirty || enum?.touched)) {
+          <span class="error">required*</span>
+          }
+        </span>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="pin"
+          formControlName="pin"
+          aria-describedby="pin-error"
+          class="input"
+        />
+        <label for="pin" class="user-label">e-Money PIN</label>
+        <span id="pin-error" aria-live="polite">
+          @if (pin?.invalid && (pin?.dirty || pin?.touched)) {
+          <span class="error">required*</span>
+          }
+        </span>
+      </div>
+    </div>
+    } @else {
+    <div class="cash">
+      <img
+        ngSrc="assets/images/checkout/icon-cash-on-delivery.svg"
+        alt=""
+        height="48"
+        width="48"
+        class="cash__img"
+      />
+      <p class="cash__description">
+        The ‘Cash on Delivery’ option enables you to pay in cash when our
+        delivery courier arrives at your residence. Just make sure your address
+        is correct so that your order will not be cancelled.
+      </p>
+    </div>
+    }
+  </div>
+
+  <div class="summary">
+    <h2 class="summary__title">summary</h2>
+    @for (item of cartItems; track item.id) {
+    <div class="product">
+      <img
+        [ngSrc]="item.image"
+        alt="{{ item.name }}"
+        width="150"
+        height="150"
+        class="product__img"
+      />
+      <div class="product__content">
+        <p class="product__name">{{ item.name }}</p>
+        <p class="product__price">$ {{ item.price }}</p>
+      </div>
+      <p class="product__quantity">x{{ item.quantity }}</p>
+    </div>
+
+    }
+
+    <p class="flex-group">
+      <span>Total</span><span>$ {{ totalPrice }}</span>
+    </p>
+
+    <p class="flex-group">
+      <span>shipping</span><span>$ {{ shippingCost }}</span>
+    </p>
+
+    <p class="flex-group">
+      <span>vat (included)</span><span>$ {{ vat.toFixed() }}</span>
+    </p>
+
+    <p class="flex-group">
+      <span>grand total</span><span class="orange">$ {{ grandTotal }}</span>
+    </p>
+
+    <button
+      class="submit__btn"
+      [disabled]="!checkoutForm.valid || cartItems.length === 0"
+    >
+      continue & pay
+    </button>
+  </div>
+</form>
+
+@if (successMessage){
+<div class="success">
+  <img
+    ngSrc="assets/images/checkout/icon-order-confirmation.svg"
+    alt=""
+    height="64"
+    width="64"
+    class="success__img"
+  />
+
+  <h3 class="success__title">thank you for your order</h3>
+
+  <p class="success__msg">You will receive an email confirmation shortly.</p>
+
+  <div class="bg-grey">
+    <div class="product">
+      <img
+        [ngSrc]="cartItems[0].image"
+        alt="{{ cartItems[0].name }}"
+        width="150"
+        height="150"
+        class="product__img"
+      />
+      <div class="product__content">
+        <p class="product__name">{{ cartItems[0].name }}</p>
+        <p class="product__price">$ {{ cartItems[0].price }}</p>
+      </div>
+      <p class="product__quantity">x{{ cartItems[0].quantity }}</p>
+    </div>
+
+    @if (cartItems.length > 1) {
+    <p class="remaining-items">
+      and {{ totalQuantity - cartItems[0].quantity }} other item(s)
+    </p>
+    }
+  </div>
+
+  <p class="success__group">
+    <span>grand total</span><span>$ {{ grandTotal }}</span>
+  </p>
+
+  <a href="/home" (click)="clearCart()" class="success__anchor">back to home</a>
+</div>
+}
