@@ -65,7 +65,7 @@ Users should be able to:
 ### What I learned
 
 This is the biggest project I did so far I combined all my prior knowledge on this project, If I want to highlight one thing
-it would be the angular service it so much fun:) doing it and I believe you learn a lot from it, I got help 
+it would be the angular service it was so much fun:) implementing it and I believe you will learn a lot from it, I got help 
 from chatgpt :D
 
 
