@@ -48,6 +48,8 @@ Users should be able to:
 - Angular routing
 - Angular Reactive forms
 - Angular Services
+- Angular Material
+- rxjs
 - LocalStorage
 - TypeScript
 - Semantic HTML5 markup
