@@ -9,7 +9,6 @@
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -48,6 +47,8 @@ Users should be able to:
 - Angular 17
 - Angular routing
 - Angular Reactive forms
+- Angular Services
+- LocalStorage
 - TypeScript
 - Semantic HTML5 markup
 - Scss
@@ -61,31 +62,11 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This is the biggest project I did so far I combined all my prior knowledge on this project, If I want to highlight one thing
+it would be the angular service it so much fun:) doing it and I believe you learn a lot from it, I got help 
+from chatgpt :D
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
@@ -93,6 +74,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [webcode.tools](https://webcode.tools/css-generator/keyframe-animation) - To generate css animations
 - [codpen.io](https://codepen.io/sosuke/pen/Pjoqqp) - I used this pen to change svg colors  using filter property
 - [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/) - How to build a modal
+- [universe.io](https://uiverse.io/alexruix/slippery-snail-18) - input element
+- [MDN](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) - radio inputs
 ## Author:
 
 - [LinkedIn](https://www.linkedin.com/in/amrabelgawad/)
